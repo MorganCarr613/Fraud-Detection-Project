@@ -58,7 +58,7 @@ MODEL_INFO = {
         "explainer": 'explainer_project.shap', 
         "pipeline": 'fine_tuned_gbm_pipeline.tar.gz', 
         "keys": ["num_C1","num_D1"],   # change these to match the names of the two most important feature 
-        "inputs": [{"name": k, "type": "number", "min": -100.0, "max": 100.0, "default": 0.0, "step": 10.0} for k in ["num_C1","num_D1"]] 
+        "inputs": [{"name": k, "type": "number", "min": -100.0, "max": 100.0, "default": 0.0, "step": 10.0} for k in ["num_C1","num_D1"]]} 
 
 
 def load_pipeline(_session, bucket, key):
