@@ -166,19 +166,19 @@ def input_fn(request_body, request_content_type):
     
         techIndicator_1 = 'num_C1'
         num_C1 = json.loads(request_body)[techIndicator_1]
-        techIndicator_2 = 'num_D1'
-        Num_D1 = json.loads(request_body)[techIndicator_2]
+        techIndicator_2 = 'num_D8'
+        Num_D8 = json.loads(request_body)[techIndicator_2]
         
         # Calculate the distance
         distances = np.sqrt(
             (X[techIndicator_1] - num_C1)**2 + 
-            (X[techIndicator_2] - num_D1)**2
+            (X[techIndicator_2] - num_D8)**2
         )
         
         closest_index = distances.idxmin()
         closest_row = X.loc[[closest_index]]
     
         closest_row[techIndicator_1] = num_C1
-        closest_row[techIndicator_2] = num_D1
+        closest_row[techIndicator_2] = num_D8
     
         return closest_row
