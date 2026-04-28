@@ -70,8 +70,8 @@ MODEL_INFO = {
     "endpoint"  : aws_endpoint,
     "explainer" : "explainer_project.shap",
     "pipeline"  : "fine_tuned_gbm_pipeline.tar.gz",
-    "keys"      : ['num_C1','num_C10','cat_card6_credit'],
-    "inputs"    : [{"name": k, "type": "number", "min": -1.0, "max": 1.0, "default": 0.0, "step": 0.01} for k in ['num_C1','num_C10','cat_card6_credit']]
+    "keys"      : ['TRANSACTIONAMT','ADDR1','ADDR2'],
+    "inputs"    : [{"name": k, "type": "number", "min": -1.0, "max": 1.0, "default": 0.0, "step": 0.01} for k in ['TRANSACTIONAMT','ADDR1','ADDR2']]
 }
 
 
